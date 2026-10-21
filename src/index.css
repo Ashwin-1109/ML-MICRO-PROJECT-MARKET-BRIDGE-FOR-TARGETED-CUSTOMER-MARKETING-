@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-canvas: #F8F7F4;
+    --bg-surface: #FFFFFF;
+    --bg-surface-elevated: #FDFDFD;
+    --text-primary: #17263F;
+    --text-secondary: #66738A;
+    --text-muted: #8E99AB;
+    --border-color: #E4E6ED;
+    --border-subtle: #EFEFEF;
+    --brand-indigo: #5F5BB6;
+    --brand-indigo-hover: #4F4A9B;
+    --brand-lavender: #EDE9FA;
+    --brand-mint: #DDF2E8;
+    --brand-blue: #E4EFFB;
+    --brand-champagne: #F4E8CF;
+    --brand-coral: #FBE4DD;
+    --color-success: #207D62;
+    --color-warning: #A76A24;
+    --color-error: #BB4651;
+  }
+
+  .dark {
+    --bg-canvas: #0C1423;
+    --bg-surface: #131D30;
+    --bg-surface-elevated: #18243C;
+    --text-primary: #F4F6FA;
+    --text-secondary: #ACB8CC;
+    --text-muted: #7E8DA5;
+    --border-color: #2B3850;
+    --border-subtle: #1F2A3F;
+    --brand-indigo: #A29BF0;
+    --brand-indigo-hover: #B8B2F7;
+    --brand-lavender: #232242;
+    --brand-mint: #163328;
+    --brand-blue: #162B44;
+    --brand-champagne: #3B3220;
+    --brand-coral: #3D221D;
+    --color-success: #34D399;
+    --color-warning: #FBBF24;
+    --color-error: #F87171;
+  }
+
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  .font-serif-luxury {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Glassmorphism primitives */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(228, 230, 237, 0.85);
+}
+
+.dark .glass-panel {
+  background: rgba(19, 29, 48, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(43, 56, 80, 0.85);
+}
+
+.glass-dropdown {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(228, 230, 237, 0.9);
+}
+
+.dark .glass-dropdown {
+  background: rgba(19, 29, 48, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(43, 56, 80, 0.9);
+}
+
+/* Custom scrollbars for clean data tables and code */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 160, 180, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 160, 180, 0.45);
+}
