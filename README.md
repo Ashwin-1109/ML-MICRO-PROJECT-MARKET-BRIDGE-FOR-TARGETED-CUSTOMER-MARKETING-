@@ -72,6 +72,19 @@ Standard customer churn models either:
 - **Python**: 3.10+ (tested on Python 3.12)
 - **npm** or **bun**
 
+### ⚡ One-Click Windows Launcher
+On Windows, you can simply double-click **`start.bat`** (or run `.\start.bat` in command prompt). It will:
+1. Detect your Python environment (venv or system Python) and start the Python ML microservice on port 8000.
+2. Start the Node.js Express & Vite application on port 3000.
+3. Automatically open your default browser to **`http://localhost:3000`**.
+
+To shut down both servers, double-click **`stop.bat`**.
+
+---
+
+### Manual Setup & Commands
+
+
 ### 1. Clone & Install Node Dependencies
 ```bash
 git clone https://github.com/your-org/marketbridge-ai.git
