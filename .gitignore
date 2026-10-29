@@ -22,3 +22,7 @@ services/ml/.pytest_cache/
 services/ml/app/__pycache__/
 services/ml/tests/__pycache__/
 
+# Datasets and Archives
+*.zip
+online+retail+ii/
+

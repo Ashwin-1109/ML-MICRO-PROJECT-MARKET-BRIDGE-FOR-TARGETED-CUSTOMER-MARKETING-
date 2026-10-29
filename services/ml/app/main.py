@@ -13,9 +13,16 @@ import pandas as pd
 from datetime import datetime, timedelta, timezone
 import time
 import os
+import sys
 import uuid
 import json
 import joblib
+
+# Ensure repository root is always in sys.path
+CURRENT_FILE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_FILE_DIR, "..", "..", ".."))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 
 def get_utc_iso() -> str:
     return datetime.now(timezone.utc).isoformat()

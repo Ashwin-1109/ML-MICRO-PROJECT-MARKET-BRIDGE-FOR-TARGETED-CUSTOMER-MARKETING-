@@ -478,8 +478,19 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, '0.0.0.0', () => {
+  const server = app.listen(PORT, '0.0.0.0', () => {
     console.log(`MarketBridge AI server listening on http://0.0.0.0:${PORT}`);
+  });
+
+  server.on('error', (err: any) => {
+    if (err.code === 'EADDRINUSE') {
+      console.error(`[!] Port ${PORT} is already in use by another process.`);
+      console.error(`[!] Please run stop.bat or terminate the process on port ${PORT} and try again.`);
+      process.exit(1);
+    } else {
+      console.error('[!] Server runtime error:', err);
+      process.exit(1);
+    }
   });
 }
 
